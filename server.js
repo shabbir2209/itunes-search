@@ -28,7 +28,7 @@ app.get('/search', async (req,res) => {
 });
 
 // production code
-if (true) {           
+if (process.env.NODE_ENV === 'production') {           
     app.use(express.static('client/build'));
   
     app.get('*', (req, res) => {
