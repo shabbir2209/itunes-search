@@ -1,0 +1,27 @@
+{
+  "name": "itunes",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "test": "mocha --timeout 20000 || true",
+    "start": "node server.js" , 
+    "heroku-postbuild": "cd client && npm install && npm run build",
+    "dev": "concurrently \"nodemon server.js\" \"cd client && npm run start\""
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "chai": "^4.3.4",
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "helmet": "^4.6.0",
+    "mocha": "^8.4.0",
+    "node-fetch": "^2.6.1",
+    "supertest": "^6.1.3"
+  },
+  "devDependencies": {
+    "concurrently": "^6.2.0"
+  }
+}
