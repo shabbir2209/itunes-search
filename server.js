@@ -10,9 +10,6 @@ const helmet = require('helmet');
 const path = require('path');
 
 // Server test link
-app.get('/', (req,res) => {
-    res.send('Server test');
-});
 
 // search link and getting the paramters from the client side 
 app.get('/search', async (req,res) => {
